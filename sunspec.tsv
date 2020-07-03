@@ -1,0 +1,284 @@
+Address	Size	Name	Type	Units	Description
+40000 	2	C_SunSpec_ID	uint32	N/A	"Value = ""SunS"" (0x53756e53).  Uniquely identifies this as a SunSpec MODBUS Map"
+40002 	1	C_SunSpec_DID_Common	uint16	N/A	Value = 0x0001.  Uniquely identifies this as a SunSpec Common Model Block
+40003 	1	C_SunSpec_Length	uint16	N/A	65 = Length of block in 16-bit registers
+40004 	16	C_Manufacturer	String(32)	N/A	"Value Registered with SunSpec = ""SolarEdge """
+40020 	16	C_Model	String(32)	N/A	SolarEdge Specific Value
+40044 	8	C_Version	String(16)	N/A	SolarEdge Specific Value
+40052 	16	C_SerialNumber	String(32)	N/A	SolarEdge Unique Value
+40068 	1	C_DeviceAddress	uint16	N/A	MODBUS Unit ID
+40069 	1	C_SunSpec_DID	uint16	N/A	101 = single phase; 102 = split phase1; 103 = three phase
+40070 	1	C_SunSpec_Length_Model	uint16	Registers	50 = Length of model block
+40071 	1	I_AC_Current	uint16	Amps	AC Total Current value
+40072 	1	I_AC_CurrentA	uint16	Amps	AC Phase A Current value
+40073 	1	I_AC_CurrentB	uint16	Amps	AC Phase B Current value
+40074 	1	I_AC_CurrentC	uint16	Amps	AC Phase C Current value
+40075 	1	I_AC_Current_SF	int16 	SF	AC Current scale factor
+40076 	1	I_AC_VoltageAB	uint16	Volts	AC Voltage Phase AB value
+40077 	1	I_AC_VoltageBC	uint16	Volts	AC Voltage Phase BC value
+40078 	1	I_AC_VoltageCA	uint16	Volts	AC Voltage Phase CA value
+40079 	1	I_AC_VoltageAN	uint16	Volts	AC Voltage Phase A to N value
+40080 	1	I_AC_VoltageBN	uint16	Volts	AC Voltage Phase B to N value
+40081 	1	I_AC_VoltageCN	uint16	Volts	AC Voltage Phase C to N value
+40082 	1	I_AC_Voltage_SF	int16 	SF	AC Voltage  scale factor
+40083 	1	I_AC_Power	int16 	Watts	AC Power value
+40084 	1	I_AC_Power_SF	int16 	SF	AC Power scale factor
+40085 	1	I_AC_Frequency	uint16	Hertz	AC Frequency value
+40086 	1	I_AC_Frequency_SF	int16 	SF	Scale factor
+40087 	1	I_AC_VA	int16	VA    	Apparent Power
+40088 	1	I_AC_VA_SF	int16 	SF	Scale factor
+40089 	1	I_AC_VAR	int16 	VAR	Reactive Power
+40090 	1	I_AC_VAR_SF	int16 	SF	Scale factor
+40091 	1	I_AC_PF	int16	%     	Power Factor
+40092 	1	I_AC_PF_SF	int16 	SF	Scale factor
+40093 	2	I_AC_Energy_WH	acc32 	WattHours	AC Lifetime Energy production
+40095 	1	I_AC_Energy_WH_SF	uint16	SF	Scale factor
+40096 	1	I_DC_Current	uint16	Amps	DC Current value
+40097 	1	I_DC_Current_SF	int16 	SF	Scale factor
+40098 	1	I_DC_Voltage	uint16	Volts	DC Voltage value
+40099 	1	I_DC_Voltage_SF	int16 	SF	Scale factor
+40100 	1	I_DC_Power	int16 	Watts	DC Power value
+40101 	1	I_DC_Power_SF	int16 	SF	Scale factor
+40103 	1	I_Temp_Sink	int16 	Degrees C	Heat Sink Temperature
+40106 	1	I_Temp_SF	int16 	SF	Scale factor
+40107 	1	I_Status	uint16	N/A	Operating State
+40108 	1	I_Status_Vendor	uint16	N/A	Vendor-defined operating state and error codes. For error description, meaning and troubleshooting, refer to the SolarEdge Installation Guide.
+40121 	1	Meter1_C_SunSpec_DID_Common	uint16	N/A	Value = 0x0001. Uniquely identifies this as a SunSpec Common Model Block
+40122 	1	Meter1_C_SunSpec_Length	uint16	N/A	65 = Length of block in 16-bit registers
+40123 	16	Meter1_C_Manufacturer	String(32)	N/A	Meter manufacturer
+40139 	16	Meter1_C_Model	String(32)	N/A	Meter model
+40155 	8	Meter1_C_Option	String(16)	N/A	Export + Import, Production, consumption,
+40163 	8	Meter1_C_Version	String(16)	N/A	Meter version
+40171 	16	Meter1_C_SerialNumber	String(32)	N/A	Meter SN
+40187 	1	Meter1_C_DeviceAddress	uint16	N/A	Inverter Modbus ID
+40188 	1	Meter1_C_SunSpec_DID	uint16	N/A	Well-known value. Uniquely identifies this as a SunSpecMODBUS Map: Single Phase (AN or AB) Meter (201); Split Single Phase (ABN) Meter (202); Wye-Connect Three Phase (ABCN) Meter (203); Delta-Connect Three Phase (ABC) Meter(204)
+40189 	1	Meter1_C_SunSpec_Length_Model	uint16	Registers	Length of meter model block
+40190 	1	M_AC_Current	int16	Amps	AC Current (sum of active phases)
+40191 	1	M_AC_Current_A	int16	Amps	Phase A AC Current
+40192 	1	M_AC_Current_B	int16	Amps	Phase B AC Current
+40193 	1	M_AC_Current_C	int16	Amps	Phase C AC Current
+40194 	1	M_AC_Current_SF	int16	SF	AC Current Scale Factor
+40195 	1	M_AC_Voltage_LN	int16	Volts	Line to Neutral AC Voltage (average of active phases)
+40196 	1	M_AC_Voltage_AN	int16	Volts	Phase A to Neutral AC Voltage
+40197 	1	M_AC_Voltage_BN	int16	Volts	Phase B to Neutral AC Voltage
+40198 	1	M_AC_Voltage_CN	int16	Volts	Phase C to Neutral AC Voltage
+40199 	1	M_AC_Voltage_LL	int16	Volts	Line to Line AC Voltage (average of active phases)
+40200 	1	M_AC_Voltage_AB	int16	Volts	Phase A to Phase B AC Voltage
+40201 	1	M_AC_Voltage_BC	int16	Volts	Phase B to Phase C AC Voltage
+40202 	1	M_AC_Voltage_CA	int16	Volts	Phase C to Phase A AC Voltage
+40203 	1	M_AC_Voltage_SF	int16	SF	AC Voltage Scale Factor
+40204 	1	M_AC_Freq	int16	Herts	AC Frequency
+40205 	1	M_AC_Freq_SF	int16	SF	AC Frequency Scale Factor
+40206	1	M_AC_Power	int16	Watts	Total Real Power (sum of active phases)
+40207	1	M_AC_Power_A	int16	Watts	Phase A AC Real Power
+40208	1	M_AC_Power_B	int16	Watts	Phase B AC Real Power
+40209	1	M_AC_Power_C	int16	Watts	Phase C AC Real Power
+40210	1	M_AC_Power_SF	int16	SF	AC Real Power Scale Factor
+40211	1	M_AC_VA	int16	Volt- Amps	"Total AC Apparent Power (sum of active phases)"
+40212	1	M_AC_VA_A	int16	Volt- Amps	Phase A AC Apparent Power
+40213	1	M_AC_VA_B	int16	Volt- Amps	Phase B AC Apparent Power
+40214	1	M_AC_VA_C	int16	Volt- Amps	Phase C AC Apparent Power
+40215	1	M_AC_VA_SF	int16	SF	AC Apparent Power Scale Factor
+40216	1	M_AC_VAR	int16	VAR	Total AC Reactive Power (sum of active phases)
+40217	1	M_AC_VAR_A	int16	VAR	Phase A AC Reactive Power
+40218	1	M_AC_VAR_B	int16	VAR	Phase B AC Reactive Power
+40219	1	M_AC_VAR_C	int16	VAR	Phase C AC Reactive Power
+40220	1	M_AC_VAR_SF	int16	SF	AC Reactive Power Scale Factor
+40221	1	M_AC_PF	int16	%	"Average Power Factor (average of active phases)"
+40222	1	M_AC_PF_A	int16	%	Phase A Power Factor
+40223	1	M_AC_PF_B	int16	%	Phase B Power Factor
+40224	1	M_AC_PF_C	int16	%	Phase C Power Factor
+40225	1	M_AC_PF_SF	int16	SF	AC Power Factor Scale Factor
+40226	2	M_Exported	uint32	Watt- hours	Total Exported Real Energy
+40228	2	M_Exported_A	uint32	Watt- hours	Phase A Exported Real Energy
+40230	2	M_Exported_B	uint32	Watt- hours	Phase B Exported Real Energy
+40232	2	M_Exported_C	uint32	Watt- hours	Phase C Exported Real Energy
+40234	2	M_Imported	uint32	Watt- hours	Total Imported Real Energy
+40236	2	M_Imported_A	uint32	Watt- hours	Phase A Imported Real Energy
+40238	2	M_Imported_B	uint32	Watt- hours	Phase B Imported Real Energy
+40240	2	M_Imported_C	uint32	Watt- hours	Phase C Imported Real Energy
+40242	1	M_Energy_W_SF	int16	SF	Real Energy Scale Factor
+40243	2	M_Exported_VA	uint32	VA-hours	Total Exported Apparent Energy
+40245	2	M_Exported_VA_A	uint32	VA-hours	Phase A Exported Apparent Energy
+40247	2	M_Exported_VA_B	uint32	VA-hours	Phase B Exported Apparent Energy
+40249	2	M_Exported_VA_C	uint32	VA-hours	Phase C Exported Apparent Energy
+40251	2	M_Imported_VA	uint32	VA-hours	Total Imported Apparent Energy
+40253	2	M_Imported_VA_A	uint32	VA-hours	Phase A Imported Apparent Energy
+40255	2	M_Imported_VA_B	uint32	VA-hours	Phase B Imported Apparent Energy
+40257	2	M_Imported_VA_C	uint32	VA-hours	Phase C Imported Apparent Energy
+40259	1	M_Energy_VA_SF	int16	SF	Apparent Energy Scale Factor
+40260	2	M_Import_VARh_Q1	uint32	VAR-hours	Quadrant 1: Total Imported Reactive Energy
+40262	2	M_Import_VARh_Q1A	uint32	VAR-hours	"Phase A - Quadrant 1: Imported Reactive Energy"
+40264	2	M_Import_VARh_Q1B	uint32	VAR-hours	Phase B- Quadrant 1: Imported Reactive Energy
+40266	2	M_Import_VARh_Q1C	uint32	VAR-hours	Phase C- Quadrant 1: Imported Reactive Energy
+40268	2	M_Import_VARh_Q2	uint32	VAR-hours	Quadrant 2: Total Imported Reactive Energy
+40270	2	M_Import_VARh_Q2A	uint32	VAR-hours	"Phase A - Quadrant 2: Imported Reactive Energy"
+40272	2	M_Import_VARh_Q2B	uint32	VAR-hours	Phase B- Quadrant 2: Imported Reactive Energy
+40274	2	M_Import_VARh_Q2C	uint32	VAR-hours	Phase C- Quadrant 2: Imported Reactive Energy
+40276	2	M_Export_VARh_Q3	uint32	VAR-hours	Quadrant 3: Total Exported Reactive Energy
+40278	2	M_Export_VARh_Q3A	uint32	VAR-hours	"Phase A - Quadrant 3: Exported Reactive Energy"
+40280	2	M_Export_VARh_Q3B	uint32	VAR-hours	Phase B- Quadrant 3: Exported Reactive Energy
+40282	2	M_Export_VARh_Q3C	uint32	VAR-hours	Phase C- Quadrant 3: Exported Reactive Energy
+40284	2	M_Export_VARh_Q4	uint32	VAR-hours	Quadrant 4: Total Exported Reactive Energy
+40286	2	M_Export_VARh_Q4A	uint32	VAR-hours	"Phase A - Quadrant 4: Exported Reactive Energy"
+40288	2	M_Export_VARh_Q4B	uint32	VAR-hours	Phase B- Quadrant 4: Exported Reactive Energy
+40290	2	M_Export_VARh_Q4C	uint32	VAR-hours	Phase C- Quadrant 4: Exported Reactive Energy
+40292	1	M_Energy_VAR_SF	int16	SF	Reactive Energy Scale Factor
+40295	1	Meter2_C_SunSpec_DID_Common	uint16	N/A	"Value = 0x0001. Uniquely identifies this as a SunSpec Common Model Block"
+40296	1	Meter2_C_SunSpec_Length	uint16	N/A	65 = Length of block in 16-bit registers
+40297	16	Meter2_C_Manufacturer	String(32)	N/A	Meter manufacturer
+40313	16	Meter2_C_Model	String(32)	N/A	Meter model
+40329	8	Meter2_C_Option	String(16)	N/A	Export+Import, Production,consumption,
+40337	8	Meter2_C_Version	String(16)	N/A	Meter version
+40345	16	Meter2_C_SerialNumber	String(32)	N/A	Meter SN
+40361	1	Meter2_C_DeviceAddress	uint16	N/A	Inverter Modbus ID
+40362	1	Meter2_C_SunSpec_DID	uint16	N/A	"Well-known value. Uniquely identifies this as a SunSpecMODBUS Map:Single Phase (AN or AB) Meter (201); Split Single Phase (ABN) Meter (202); Wye-Connect Three Phase (ABCN) Meter (203); Delta-Connect Three Phase (ABC) Meter(204)"
+40363	1	Meter2_C_SunSpec_Length	uint16	Registers	Length of meter model block
+40364	1	M_AC_Current	int16	Amps	AC Current (sum of active phases)
+40366	1	M_AC_Current_B	int16	Amps	Phase B AC Current
+40367	1	M_AC_Current_C	int16	Amps	Phase C AC Current
+40368	1	M_AC_Current_SF	int16	SF	AC Current Scale Factor
+40369	1	M_AC_Voltage_LN	int16	Volts	"Line to Neutral AC Voltage (average of active phases)"
+40370	1	M_AC_Voltage_AN	int16	Volts	Phase A to Neutral AC Voltage
+40371	1	M_AC_Voltage_BN	int16	Volts	Phase B to Neutral AC Voltage
+40372	1	M_AC_Voltage_CN	int16	Volts	Phase C to Neutral AC Voltage
+40373	1	M_AC_Voltage_LL	int16	Volts	"Line to Line AC Voltage (average of active phases)"
+40374	1	M_AC_Voltage_AB	int16	Volts	Phase A to Phase B AC Voltage
+40375	1	M_AC_Voltage_BC	int16	Volts	Phase B to Phase C AC Voltage
+40376	1	M_AC_Voltage_CA	int16	Volts	Phase C to Phase A AC Voltage
+40377	1	M_AC_Voltage_SF	int16	SF	AC Voltage Scale Factor
+40378	1	M_AC_Freq	int16	Herts	AC Frequency
+40379	1	M_AC_Freq_SF	int16	SF	AC Frequency Scale Factor
+40380	1	M_AC_Power	int16	Watts	Total Real Power (sum of active phases)
+40381	1	M_AC_Power_A	int16	Watts	Phase A AC Real Power
+40382	1	M_AC_Power_B	int16	Watts	Phase B AC Real Power
+40383	1	M_AC_Power_C	int16	Watts	Phase C AC Real Power
+40384	1	M_AC_Power_SF	int16	SF	AC Real Power Scale Factor
+40385	1	M_AC_VA	int16	Volt- Amps	"Total AC Apparent Power (sum of active phases)"
+40386	1	M_AC_VA_A	int16	Volt- Amps	Phase A AC Apparent Power
+40387	1	M_AC_VA_B	int16	Volt- Amps	Phase B AC Apparent Power
+40388	1	M_AC_VA_C	int16	Volt- Amps	Phase C AC Apparent Power
+40389	1	M_AC_VA_SF	int16	SF	AC Apparent Power Scale Factor
+40390	1	M_AC_VAR	int16	VAR	Total AC Reactive Power(sum of active phases)
+40391	1	M_AC_VAR_A	int16	VAR	Phase A AC Reactive Power
+40392	1	M_AC_VAR_B	int16	VAR	Phase B AC Reactive Power
+40393	1	M_AC_VAR_C	int16	VAR	Phase C AC Reactive Power
+40394	1	M_AC_VAR_SF	int16	SF	AC Reactive Power Scale Factor
+40395	1	M_AC_PF	int16	%	"Average Power Factor (average of active phases)"
+40396	1	M_AC_PF_A	int16	%	Phase A Power Factor
+40397	1	M_AC_PF_B	int16	%	Phase B Power Factor
+40398	1	M_AC_PF_C	int16	%	Phase C Power Factor
+40400	2	M_Exported	uint32	Watt- hours	Total Exported Real Energy
+40402	2	M_Exported_A	uint32	Watt- hours	Phase A Exported Real Energy
+40404	2	M_Exported_B	uint32	Watt- hours	Phase B Exported Real Energy
+40406	2	M_Exported_C	uint32	Watt- hours	Phase C Exported Real Energy
+40408	2	M_Imported	uint32	Watt- hours	Total Imported Real Energy
+40410	2	M_Imported_A	uint32	Watt- hours	Phase A Imported Real Energy
+40412	2	M_Imported_B	uint32	Watt- hours	Phase B Imported Real Energy
+40414	2	M_Imported_C	uint32	Watt- hours	Phase C Imported Real Energy
+40416	1	M_Energy_W_SF	int16	SF	Real Energy Scale Factor
+40417	2	M_Exported_VA	uint32	VA-hours	Total Exported Apparent Energy
+40419	2	M_Exported_VA_A	uint32	VA-hours	Phase A Exported Apparent Energy
+40421	2	M_Exported_VA_B	uint32	VA-hours	Phase B Exported Apparent Energy
+40423	2	M_Exported_VA_C	uint32	VA-hours	Phase C Exported Apparent Energy
+40425	2	M_Imported_VA	uint32	VA-hours	Total Imported Apparent Energy
+40427	2	M_Imported_VA_A	uint32	VA-hours	Phase A Imported Apparent Energy
+40429	2	M_Imported_VA_B	uint32	VA-hours	Phase B Imported Apparent Energy
+40431	2	M_Imported_VA_C	uint32	VA-hours	Phase C Imported Apparent Energy
+40433	1	M_Energy_VA_SF	int16	SF	Apparent Energy Scale Factor
+40434	2	M_Import_VARh_Q1	uint32	VAR-hours	Quadrant 1: Total Imported Reactive Energy
+40436	2	M_Import_VARh_Q1A	uint32	VAR-hours	"Phase A - Quadrant 1: Imported Reactive Energy"
+40438	2	M_Import_VARh_Q1B	uint32	VAR-hours	Phase B- Quadrant 1: Imported Reactive Energy
+40440	2	M_Import_VARh_Q1C	uint32	VAR-hours	Phase C- Quadrant 1: Imported Reactive Energy
+40442	2	M_Import_VARh_Q2	uint32	VAR-hours	Quadrant 2: Total Imported Reactive Energy
+40444	2	M_Import_VARh_Q2A	uint32	VAR-hours	"Phase A - Quadrant 2: Imported Reactive Energy"
+40446	2	M_Import_VARh_Q2B	uint32	VAR-hours	Phase B- Quadrant 2: Imported Reactive Energy
+40448	2	M_Import_VARh_Q2C	uint32	VAR-hours	Phase C- Quadrant 2: Imported Reactive Energy
+40450	2	M_Export_VARh_Q3	uint32	VAR-hours	Quadrant 3: Total Exported Reactive Energy
+40452	2	M_Export_VARh_Q3A	uint32	VAR-hours	"Phase A - Quadrant 3: Exported Reactive Energy"
+40454	2	M_Export_VARh_Q3B	uint32	VAR-hours	Phase B- Quadrant 3: Exported Reactive Energy
+40456	2	M_Export_VARh_Q3C	uint32	VAR-hours	Phase C- Quadrant 3: Exported Reactive Energy
+40458	2	M_Export_VARh_Q4	uint32	VAR-hours	Quadrant 4: Total Exported Reactive Energy
+40460	2	M_Export_VARh_Q4A	uint32	VAR-hours	"Phase A - Quadrant 4: Exported Reactive Energy"
+40462	2	M_Export_VARh_Q4B	uint32	VAR-hours	Phase B- Quadrant 4: Exported Reactive Energy
+40464	2	M_Export_VARh_Q4C	uint32	VAR-hours	Phase C- Quadrant 4: Exported Reactive Energy
+40466	1	M_Energy_VAR_SF	int16	SF	Reactive Energy Scale Factor
+40469	1	Meter3_C_SunSpec_DID_Common	uint16	N/A	"Value = 0x0001. Uniquely identifies this as a SunSpec Common Model Block"
+40470	1	Meter3_C_SunSpec_Length	uint16	N/A	65 = Length of block in 16-bit registers
+40472	16	Meter3_C_Manufacturer	String(32)	N/A	Meter manufacturer
+40488	16	Meter3_C_Model	String(32)	N/A	Meter model
+40504	8	Meter3_C_Option	String(16)	N/A	Export+Import, Production,consumption,
+40512	8	Meter3_C_Version	String(16)	N/A	Meter version
+40520	16	Meter3_C_SerialNumber	String(32)	N/A	Meter SN
+40536	1	Meter3_C_DeviceAddress	uint16	N/A	Inverter Modbus ID
+40537	1	Meter3_C_SunSpec_DID	uint16	N/A	"Well-known value. Uniquely identifies this as a SunSpecMODBUS Map: Single Phase (AN or AB) Meter (201) Split Single Phase (ABN) Meter (202) Wye-Connect Three Phase (ABCN) Meter (203) Delta-Connect Three Phase (ABC) Meter(204)"
+40538	1	Meter3_C_SunSpec_Length	uint16	Registers	Length of meter model block
+40539	1	M_AC_Current	int16	Amps	AC Current (sum of active phases)
+40540	1	M_AC_Current_A	int16	Amps	Phase A AC Current
+40541	1	M_AC_Current_B	int16	Amps	Phase B AC Current
+40542	1	M_AC_Current_C	int16	Amps	Phase C AC Current
+40543	1	M_AC_Current_SF	int16	SF	AC Current Scale Factor
+40544	1	M_AC_Voltage_LN	int16	Volts	"Line to Neutral AC Voltage (average of active phases)"
+40545	1	M_AC_Voltage_AN	int16	Volts	Phase A to Neutral AC Voltage
+40546	1	M_AC_Voltage_BN	int16	Volts	Phase B to Neutral AC Voltage
+40547	1	M_AC_Voltage_CN	int16	Volts	Phase C to Neutral AC Voltage
+40548	1	M_AC_Voltage_LL	int16	Volts	"Line to Line AC Voltage (average of active phases)"
+40549	1	M_AC_Voltage_AB	int16	Volts	Phase A to Phase B AC Voltage
+40550	1	M_AC_Voltage_BC	int16	Volts	Phase B to Phase C AC Voltage
+40551	1	M_AC_Voltage_CA	int16	Volts	Phase C to Phase A AC Voltage
+40552	1	M_AC_Voltage_SF	int16	SF	AC Voltage Scale Factor
+40553	1	M_AC_Freq	int16	Herts	AC Frequency
+40554	1	M_AC_Freq_SF	int16	SF	AC Frequency Scale Factor
+40555	1	M_AC_Power	int16	Watts	Total Real Power (sum of active phases)
+40556	1	M_AC_Power_A	int16	Watts	Phase A AC Real Power
+40557	1	M_AC_Power_B	int16	Watts	Phase B AC Real Power
+40559	1	M_AC_Power_SF	int16	SF	AC Real Power Scale Factor
+40560	1	M_AC_VA	int16	Volt- Amps	"Total AC Apparent Power (sum of active phases)"
+40561	1	M_AC_VA_A	int16	Volt- Amps	Phase A AC Apparent Power
+40562	1	M_AC_VA_B	int16	Volt- Amps	Phase B AC Apparent Power
+40563	1	M_AC_VA_C	int16	Volt- Amps	Phase C AC Apparent Power
+40564	1	M_AC_VA_SF	int16	SF	AC Apparent Power Scale Factor
+40565	1	M_AC_VAR	int16	VAR	Total AC Reactive Power (sum of active phases)
+40566	1	M_AC_VAR_A	int16	VAR	Phase A AC Reactive Power
+40567	1	M_AC_VAR_B	int16	VAR	Phase B AC Reactive Power
+40568	1	M_AC_VAR_C	int16	VAR	Phase C AC Reactive Power
+40569	1	M_AC_VAR_SF	int16	SF	AC Reactive Power Scale Factor
+40570	1	M_AC_PF	int16	%	"Average Power Factor (average of active phases)"
+40571	1	M_AC_PF_A	int16	%	Phase A Power Factor
+40572	1	M_AC_PF_B	int16	%	Phase B Power Factor
+40573	1	M_AC_PF_C	int16	%	Phase C Power Factor
+40574	1	M_AC_PF_SF	int16	SF	AC Power Factor Scale Factor
+40575	2	M_Exported	uint32	Watt- hours	Total Exported Real Energy
+40577	2	M_Exported_A	uint32	Watt- hours	Phase A Exported Real Energy
+40579	2	M_Exported_B	uint32	Watt- hours	Phase B Exported Real Energy
+40581	2	M_Exported_C	uint32	Watt- hours	Phase C Exported Real Energy
+40583	2	M_Imported	uint32	Watt- hours	Total Imported Real Energy
+40585	2	M_Imported_A	uint32	Watt- hours	Phase A Imported Real Energy
+40587	2	M_Imported_B	uint32	Watt- hours	Phase B Imported Real Energy
+40589	2	M_Imported_C	uint32	Watt- hours	Phase C Imported Real Energy
+40591	1	M_Energy_W_SF	int16	SF	Real Energy Scale Factor
+40592	2	M_Exported_VA	uint32	VA-hours	Total Exported Apparent Energy
+40594	2	M_Exported_VA_A	uint32	VA-hours	Phase A Exported Apparent Energy
+40596	2	M_Exported_VA_B	uint32	VA-hours	Phase B Exported Apparent Energy
+40598	2	M_Exported_VA_C	uint32	VA-hours	Phase C Exported Apparent Energy
+40600	2	M_Imported_VA	uint32	VA-hours	Total Imported Apparent Energy
+40602	2	M_Imported_VA_A	uint32	VA-hours	Phase A Imported Apparent Energy
+40604	2	M_Imported_VA_B	uint32	VA-hours	Phase B Imported Apparent Energy
+40606	2	M_Imported_VA_C	uint32	VA-hours	Phase C Imported Apparent Energy
+40608	1	M_Energy_VA_SF	int16	SF	Apparent Energy Scale Factor
+40610	2	M_Import_VARh_Q1	uint32	VAR-hours	Quadrant 1: Total Imported Reactive Energy
+40612	2	M_Import_VARh_Q1A	uint32	VAR-hours	"Phase A - Quadrant 1: Imported Reactive Energy"
+40616	2	M_Import_VARh_Q1C	uint32	VAR-hours	Phase C- Quadrant 1: Imported Reactive Energy
+40618	2	M_Import_VARh_Q2	uint32	VAR-hours	Quadrant 2: Total Imported Reactive Energy
+40620	2	M_Import_VARh_Q2A	uint32	VAR-hours	"Phase A - Quadrant 2: Imported Reactive Energy"
+40622	2	M_Import_VARh_Q2B	uint32	VAR-hours	Phase B- Quadrant 2: Imported Reactive Energy
+40624	2	M_Import_VARh_Q2C	uint32	VAR-hours	Phase C- Quadrant 2: Imported Reactive Energy
+40626	2	M_Export_VARh_Q3	uint32	VAR-hours	Quadrant 3: Total Exported Reactive Energy
+40628	2	M_Export_VARh_Q3A	uint32	VAR-hours	"Phase A - Quadrant 3: Exported Reactive Energy"
+40630	2	M_Export_VARh_Q3B	uint32	VAR-hours	Phase B- Quadrant 3: Exported Reactive Energy
+40632	2	M_Export_VARh_Q3C	uint32	VAR-hours	Phase C- Quadrant 3: Exported Reactive Energy
+40634	2	M_Export_VARh_Q4	uint32	VAR-hours	Quadrant 4: Total Exported Reactive Energy
+40636	2	M_Export_VARh_Q4A	uint32	VAR-hours	"Phase A - Quadrant 4: Exported Reactive Energy"
+40638	2	M_Export_VARh_Q4B	uint32	VAR-hours	Phase B- Quadrant 4: Exported Reactive Energy
+40640	2	M_Export_VARh_Q4C	uint32	VAR-hours	Phase C- Quadrant 4: Exported Reactive Energy
+40642	1	M_Energy_VAR_SF	int16	SF	Reactive Energy Scale Factor

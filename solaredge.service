@@ -1,0 +1,11 @@
+[Unit]
+Description=Write SolarEdge monitoring data to influxdb
+Wants=solaredge.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/solaredge/dump.py
+WorkingDirectory=/usr/local/solaredge
+
+[Install]
+WantedBy=multi-user.target

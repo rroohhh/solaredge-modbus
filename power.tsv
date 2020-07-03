@@ -1,0 +1,320 @@
+Address	Size	R/W	Name	Type	Value Range	Units
+F000	1	R	RRCR State	Uint16	0-15	N/A
+F001	1	R/W	Active Power Limit	Uint16	0-100	%
+F002	2	R/W	CosPhi	Float32	-1.0 - 1.0	N/A
+F100	1	R/W	Commit Power Control Settings	Int16	N/A	N/A
+F101	1	R/W	Restore Power Control Default Settings	Int16	N/A	N/A
+F142	2	R/W	AdvancedPwrControlEn	Int32	0-1	N/A
+F10A	2	R/W	FixedCosPhiPhase	Float32	-1.0 - 1.0	N/A
+F10E	2	R/W	ReactCosPhiVsPX[0]	Float32	0-100	P/Pmax %
+F110	2	R/W	ReactCosPhiVsPX[1]	Float32	0-100	P/Pmax %
+F112	2	R/W	ReactCosPhiVsPX[2]	Float32	0-100	P/Pmax %
+F114	2	R/W	ReactCosPhiVsPX[3]	Float32	0-100	P/Pmax %
+F116	2	R/W	ReactCosPhiVsPX[4]	Float32	0-100	P/Pmax %
+F118	2	R/W	ReactCosPhiVsPX[5]	Float32	0-100	P/Pmax %
+F11A	2	R/W	ReactCosPhiVsPY[0]	Float32	-1.0 - 1.0	N/A
+F11C	2	R/W	ReactCosPhiVsPY[1]	Float32	-1.0 - 1.0	N/A
+F11E	2	R/W	ReactCosPhiVsPY[2]	Float32	-1.0 - 1.0	N/A
+F120	2	R/W	ReactCosPhiVsPY[3]	Float32	-1.0 - 1.0	N/A
+F122	2	R/W	ReactCosPhiVsPY[4]	Float32	-1.0 - 1.0	N/A
+F124	2	R/W	ReactCosPhiVsPY[5]	Float32	-1.0 - 1.0	N/A
+F17A	2	R/W	ReactCosPhiVsPVgLockInMax	Float32	0-2	V/Vnom
+F17C	2	R/W	ReactCosPhiVsPVgLockInMin	Float32	0-2	V/Vnom
+F17E	2	R/W	ReactCosPhiVsPVgLockOutMax	Float32	0-2	V/Vnom
+F180	2	R/W	ReactCosPhiVsPVgLockOutMin	Float32	0-2	V/Vnom
+F10C	2	R/W	FixedReactPwr	Float32	0-Max Power	VAR
+F126	2	R/W	ReactQVsVgX[0]	Float32	0-200	V/Vnom %
+F128	2	R/W	ReactQVsVgX[1]	Float32	0-200	V/Vnom %
+F12A	2	R/W	ReactQVsVgX[2]	Float32	0-200	V/Vnom %
+F12C	2	R/W	ReactQVsVgX[3]	Float32	0-200	V/Vnom %
+F12E	2	R/W	ReactQVsVgX[4]	Float32	0-200	V/Vnom %
+F130	2	R/W	ReactQVsVgX[5]	Float32	0-200	V/Vnom %
+F132	2	R/W	ReactQVsVgY[0]	Float32	-100 - 100	Q/Pmax %
+F134	2	R/W	ReactQVsVgY[1]	Float32	-100 - 100	Q/Pmax %
+F136	2	R/W	ReactQVsVgY[2]	Float32	-100 - 100	Q/Pmax %
+F138	2	R/W	ReactQVsVgY[3]	Float32	-100 - 100	Q/Pmax %
+F13A	2	R/W	ReactQVsVgY[4]	Float32	-100 - 100	Q/Pmax %
+F13C	2	R/W	ReactQVsVgY[5]	Float32	-100 - 100	Q/Pmax %
+F182	2	R/W	ReactQVsVgPLockInMax	Float32	0-1	P/Pmax
+F184	2	R/W	ReactQVsVgPLockInMin	Float32	0-1	P/Pmax
+F186	2	R/W	ReactQVsVgPLockOutMax	Float32	0-1	P/Pmax
+F188	2	R/W	ReactQVsVgPLockOutMin	Float32	0-1	P/Pmax
+F18A	2	R/W	ReactQVsVgType	Uint32	0,1	N/A
+F15E	2	R/W	ReactQVsPX[0]	Float32	0-100	P/Pmax %
+F160	2	R/W	ReactQVsPX[1]	Float32	0-100	P/Pmax %
+F162	2	R/W	ReactQVsPX[2]	Float32	0-100	P/Pmax %
+F164	2	R/W	ReactQVsPX[3]	Float32	0-100	P/Pmax %
+F166	2	R/W	ReactQVsPX[4]	Float32	0-100	P/Pmax %
+F168	2	R/W	ReactQVsPX[5]	Float32	0-100	P/Pmax %
+F16A	2	R/W	ReactQVsPY[0]	Float32	0-100	Q/Pmax %
+F16C	2	R/W	ReactQVsPY[1]	Float32	0-100	Q/Pmax %
+F16E	2	R/W	ReactQVsPY[2]	Float32	0-100	Q/Pmax %
+F170	2	R/W	ReactQVsPY[3]	Float32	0-100	Q/Pmax %
+F172	2	R/W	ReactQVsPY[4]	Float32	0-100	Q/Pmax %
+F174	2	R/W	ReactQVsPY[5]	Float32	0-100	Q/Pmax %
+F14E	2	R/W	Vnom	Float32	0-500	V
+F104	2	R/W	ReactivePwrConfig	Int32	0-4	N/A
+F106	2	R/W	ReactPwrIterTime	Uint32	10 - 600000	ms
+F140	2	R/W	PowerReduce	Float32	0-100	%
+F18E	2	R/W	MaxCurrent	Float32	0-256	A
+F108	2	R/W	ActivePwrGradEn	Int32	0, 1	N/A
+F18C	2	R/W	PwrSoftStartTime	Uint32	0-3600000	ms
+F190	2	R/W	PwrVsVgX[0]	Float32	0-200	V/Vnom %
+F192	2	R/W	PwrVsVgX[1]	Float32	0-200	V/Vnom %
+F194	2	R/W	PwrVsVgX[2]	Float32	0-200	V/Vnom %
+F196	2	R/W	PwrVsVgX[3]	Float32	0-200	V/Vnom %
+F198	2	R/W	PwrVsVgX[4]	Float32	0-200	V/Vnom %
+F19A	2	R/W	PwrVsVgX[5]	Float32	0-200	V/Vnom %
+F19C	2	R/W	PwrVsVgY[0]	Float32	0-100	P/Pmax %
+F19E	2	R/W	PwrVsVgY[1]	Float32	0-100	P/Pmax %
+F1A0	2	R/W	PwrVsVgY[2]	Float32	0-100	P/Pmax %
+F1A2	2	R/W	PwrVsVgY[3]	Float32	0-100	P/Pmax %
+F1A4	2	R/W	PwrVsVgY[4]	Float32	0-100	P/Pmax %
+F146	2	R/W	MaxWakeupFreq	Float32	0-100	Hz
+F148	2	R/W	MinWakeupFreq	Float32	0-100	Hz
+F14A	2	R/W	MaxWakeupVg	Float32	0-500	V
+F152	2	R/W	PwrVsFreqX[0]	Float32	0-100	Hz
+F154	2	R/W	PwrVsFreqX[1]	Float32	0-100	Hz
+F156	2	R/W	PwrVsFreqY[0]	Float32	0-100	%
+F158	2	R/W	PwrVsFreqY[1]	Float32	0-100	%
+F15A	2	R/W	ResetFreq	Float32	0-100	Hz
+F15C	2	R/W	MaxFreq	Float32	0-100	Hz
+F176	2	R/W	PwrFrqDeratingResetTime	Uint32	0-MAX_UINT32	ms
+F144	2	R/W	FrtEn	Int32	0, 1	N/A
+F102	2	R/W	PwrFrqDeratingConfig	Int32	0-4	N/A
+F104	2	R/W	ReactivePwrConfig	Int32	0-4	N/A
+F106	2	R/W	ReactPwrIterTime	Uint32	0-MAX_UINT32	ms
+F108	2	R/W	ActivePwrGrad	Int32	0, 1	N/A
+F10A	2	R/W	FixedCosPhiPhase	Float32	-1.0 - 1.0	N/A
+F10C	2	R/W	FixedReactPwr	Float32	0-MAX_FLOAT	VAR
+F10E	2	R/W	ReactCosPhiVsPX[0]	Float32	0-100	P/Pmax %
+F110	2	R/W	ReactCosPhiVsPX[1]	Float32	0-100	P/Pmax %
+F112	2	R/W	ReactCosPhiVsPX[2]	Float32	0-100	P/Pmax %
+F114	2	R/W	ReactCosPhiVsPX[3]	Float32	0-100	P/Pmax %
+F116	2	R/W	ReactCosPhiVsPX[4]	Float32	0-100	P/Pmax %
+F118	2	R/W	ReactCosPhiVsPX[5]	Float32	0-100	P/Pmax %
+F11A	2	R/W	ReactCosPhiVsPY[0]	Float32	-1.0 - 1.0	N/A
+F11C	2	R/W	ReactCosPhiVsPY[1]	Float32	-1.0 - 1.0	N/A
+F11E	2	R/W	ReactCosPhiVsPY[2]	Float32	-1.0 - 1.0	N/A
+F120	2	R/W	ReactCosPhiVsPY[3]	Float32	-1.0 - 1.0	N/A
+F122	2	R/W	ReactCosPhiVsPY[4]	Float32	-1.0 - 1.0	N/A
+F124	2	R/W	ReactCosPhiVsPY[5]	Float32	-1.0 - 1.0	N/A
+F126	2	R/W	ReactQVsVgX[0]	Float32	0-200	V/Vnom %
+F128	2	R/W	ReactQVsVgX[1]	Float32	0-200	V/Vnom %
+F12A	2	R/W	ReactQVsVgX[2]	Float32	0-200	V/Vnom %
+F12C	2	R/W	ReactQVsVgX[3]	Float32	0-200	V/Vnom %
+F12E	2	R/W	ReactQVsVgX[4]	Float32	0-200	V/Vnom %
+F130	2	R/W	ReactQVsVgX[5]	Float32	0-200	V/Vnom %
+F132	2	R/W	ReactQVsVgY[0]	Float32	-100 - 100	Q/Pmax %
+F134	2	R/W	ReactQVsVgY[1]	Float32	-100 - 100	Q/Pmax %
+F136	2	R/W	ReactQVsVgY[2]	Float32	-100 - 100	Q/Pmax %
+F138	2	R/W	ReactQVsVgY[3]	Float32	-100 - 100	Q/Pmax %
+F13A	2	R/W	ReactQVsVgY[4]	Float32	-100 - 100	Q/Pmax %
+F13C	2	R/W	ReactQVsVgY[5]	Float32	-100 - 100	Q/Pmax %
+F13E	2	R/W	FRT_KFactor	Float32	0-16	N/A
+F140	2	R/W	PowerReduce	Float32	0-100	%
+F142	2	R/W	AdvancedPwrControlEn	Int32	0-1	N/A
+F144	2	R/W	FrtEn	Int32	0-1	N/A
+F146	2	R/W	MaxWakeupFreq	Float32	0-100	Hz
+F148	2	R/W	MinWakeupFreq	Float32	0-100	Hz
+F14A	2	R/W	MaxWakeupVg	Float32	0-500	V
+F14C	2	R/W	MinWakeupVg	Float32	0-500	V
+F14E	2	R/W	Vnom	Float32	0-500	V
+F150	2	R	Inom	Float32	0-100	A
+F152	2	R/W	PwrVsFreqX[0]	Float32	0-100	Hz
+F154	2	R/W	PwrVsFreqX[1]	Float32	0-100	Hz
+F156	2	R/W	PwrVsFreqY[0]	Float32	0-100	%
+F158	2	R/W	PwrVsFreqY[1]	Float32	0-100	%
+F15A	2	R/W	ResetFreq	Float32	0-100	Hz
+F15C	2	R/W	MaxFreq	Float32	0-100	Hz
+F15E	2	R/W	ReactQVsPX[0]	Float32	0-100	P/Pmax %
+F160	2	R/W	ReactQVsPX[1]	Float32	0-100	P/Pmax %
+F162	2	R/W	ReactQVsPX[2]	Float32	0-100	P/Pmax %
+F164	2	R/W	ReactQVsPX[3]	Float32	0-100	P/Pmax %
+F166	2	R/W	ReactQVsPX[4]	Float32	0-100	P/Pmax %
+F168	2	R/W	ReactQVsPX[5]	Float32	0-100	P/Pmax %
+F16A	2	R/W	ReactQVsPY[0]	Float32	0-100	Q/Pmax %
+F16C	2	R/W	ReactQVsPY[1]	Float32	0-100	Q/Pmax %
+F16E	2	R/W	ReactQVsPY[2]	Float32	0-100	Q/Pmax %
+F170	2	R/W	ReactQVsPY[3]	Float32	0-100	Q/Pmax %
+F172	2	R/W	ReactQVsPY[4]	Float32	0-100	Q/Pmax %
+F174	2	R/W	ReactQVsPY[5]	Float32	0-100	Q/Pmax %
+F176	2	R/W	PwrFrqDeratingResetTime	Uint32	0-MAX_UINT32	ms
+F178	2	R/W	PwrFrqDeratingGradTime	Uint32	0-MAX_UINT32	ms
+F17A	2	R/W	ReactCosPhiVsPVgLockInMax	Float32	0-2	V/Vnom
+F17C	2	R/W	ReactCosPhiVsPVgLockInMin	Float32	0-2	V/Vnom
+F17E	2	R/W	ReactCosPhiVsPVgLockOutMax	Float32	0-2	V/Vnom
+F180	2	R/W	ReactCosPhiVsPVgLockOutMin	Float32	0-2	V/Vnom
+F182	2	R/W	ReactQVsVgPLockInMax	Float32	0-2	P/Pmax
+F184	2	R/W	ReactQVsVgPLockInMin	Float32	0-2	P/Pmax
+F186	2	R/W	ReactQVsVgPLockOutMax	Float32	0-2	P/Pmax
+F188	2	R/W	ReactQVsVgPLockOutMin	Float32	0-2	P/Pmax
+F18A	2	R/W	ReactQVsVgType	Uint32	0-1	N/A
+F18C	2	R/W	PwrSoftStartTime	Uint32	0-MAX_UINT32	ms
+F18E	2	R/W	MaxCurrent	Float32	0-256	A
+F190	2	R/W	PwrVsVgX[0]	Float32	0-2	V/Vnom
+F192	2	R/W	PwrVsVgX[1]	Float32	0-2	V/Vnom
+F194	2	R/W	PwrVsVgX[2]	Float32	0-2	V/Vnom
+F196	2	R/W	PwrVsVgX[3]	Float32	0-2	V/Vnom
+F198	2	R/W	PwrVsVgX[4]	Float32	0-2	V/Vnom
+F19A	2	R/W	PwrVsVgX[5]	Float32	0-2	V/Vnom
+F19C	2	R/W	PwrVsVgY[0]	Float32	0-1	P/Pmax
+F19E	2	R/W	PwrVsVgY[1]	Float32	0-1	P/Pmax
+F1A0	2	R/W	PwrVsVgY[2]	Float32	0-1	P/Pmax
+F1A2	2	R/W	PwrVsVgY[3]	Float32	0-1	P/Pmax
+F1A4	2	R/W	PwrVsVgY[4]	Float32	0-1	P/Pmax
+F1A6	2	R/W	PwrVsVgY[5]	Float32	0-1	P/Pmax
+F1A8	2	R/W	DisconnectAtZeroPwrLim	Float32	0-1	N/A
+F300	1	R/W	Enable Dynamic Power Control	Uint16	0-1	N/A
+F304	2	R	Max Active Power	Float32	Inverter rating	W
+F306	2	R	Max Reactive Power	Float32	Inverter rating	VAR
+F308	1	R/W	Active/Reactive Preference	Uint16	0-1	0-1
+F309	1	R/W	CosPhi/Q Preference	Uint16	0-1	0-1
+F30C	2	R/W	Active Power Limit	Float32	0- Max Active Power	W
+F30E	2	R/W	Reactive Power Limit	Float32	0- Max Reactive Power	VAR
+F310	2	R/W	Command Timeout	Uint32	0-MAX_UINT32	Sec
+F312	2	R/W	Fall-back Active Power Limit	Float32	0-100	%
+F314	2	R/W	Fall-back Reactive Power Limit	Float32	0-100	%
+F316	2	R/W	Fall-back CosPhi	Float32	-1 to 1	N/A
+F318	2	R/W	Active Power Ramp-up Rate	Float32	0-100	%/min
+F31A	2	R/W	Active Power Ramp-down Rate	Float32	0-100	%/min
+F31C	2	R/W	Reactive Power Ramp-up Rate	Float32	0-100	%/min
+F31E	2	R/W	Reactive Power Ramp-down Rate	Float32	0-100	%/min
+F320	2	R/W	Phi Change Rate	Float32	0 - pi	rad/min
+F322	2	R/W	Dynamic Active Power Limit	Float32	0-100	%
+F324	2	R/W	Dynamic Reactive Power Ref	Float32	0-100	%
+F326	2	R/W	Dynamic CosPhi Ref	Float32	-1 to 1	N/A
+F300	1	R/W	Enable Dynamic Power Control	Uint16	0-1	N/A
+F301	1	R	Reserved	Uint16	-	-
+F302	2	R	Reserved	Float32	-	-
+F304	2	R	Max Active Power	Float32	Inverter rating	W
+F306	2	R	Max Reactive Power	Float32	Inverter rating	VAR
+F308	1	R/W	Active/Reactive Preference	Uint16	0-1	0-1
+F309	1	R/W	CosPhi/Q Preference	Uint16	0-1	0-1
+F30A	2	R/W	Reserved	Float32	-	-
+F30C	2	R/W	Other Active Power Limit	Float32	0- Max Active Power	W
+F30E	2	R/W	Reactive Power Limit	Float32	0- Max Reactive Power	VAR
+F310	2	R/W	Command Timeout	Uint32	0-MAX_UINT32	Sec
+F312	2	R/W	Fall-back Active Power Limit	Float32	0-100	%
+F314	2	R/W	Fall-back Reactive Power Limit	Float32	0-100	%
+F316	2	R/W	Fall-back CosPhi	Float32	?	N/A
+F318	2	R/W	Active Power Ramp-up Rate	Float32	0-100	%/min
+F31A	2	R/W	Active Power Ramp-down Rate	Float32	0-100	%/min
+F31C	2	R/W	Reactive Power Ramp-up Rate	Float32	0-100	%/min
+F31E	2	R/W	Reactive Power Ramp-down Rate	Float32	0-100	%/min
+F320	2	R/W	Phi Change Rate	Float32	0 - pi	rad/min
+F322	2	R/W	Dynamic Active Power Limit	Float32	0-100	%
+F324	2	R/W	Dynamic Reactive Power Ref	Float32	0-100	%
+F326	2	R/W	Dynamic CosPhi Ref	Float32	0 - pi	N/A
+E000 	1	R/W	Export Control Mode	Uint16	Bits 0 (LSB) - 11	N/A
+E001 	1	R/W	Export Control Limit Mode	Uint16	0-1	N/A
+E002 	2	R/W	Export Control Site Limit	Float32	0-Max_Site Power	W
+E012	2	R/W	External Production Max Power	Float32	0-Max_External Source Power	W
+E004 	1	R/W	Storage Control  Mode	Uint16	0-4	N/A
+E005 	1	R/W	Storage AC Charge Policy	Uint16	0-3	N/A
+E006 	2	R/W	Storage AC Charge Limit	Float32	0-Max_Float	KWh or %
+E008 	2	R/W	Storage Backup Reserved Setting	Float32	0-100	%
+E00A 	1	R/W	Storage Charge/Discharge Default Mode	Uint16	0-7	N/A
+E00B 	2	R/W	Remote Control Command Timeout	Uint32	0-86400(24h)	Sec
+E00D 	1	R/W	Remote Control Command Mode	Uint16	0-7	N/A
+E00E 	2	R/W	Remote Control Charge Limit	Float32	0- Battery Max Power	W
+E010 	2	R/W	Remote Control Command Discharge Limit	Float32	0- Battery Max Power	W
+E100 	16	R	Battery 1 Manufacturer Name	String[32]		-
+E110 	16	R	Battery 1 Model	String[32]		-
+E120 	16	R	Battery 1 Firmware Version	String[32]		-
+E130 	16	R	Battery 1 Serial Number	String[32]		-
+E140 	1	R	Battery 1 Device ID	Uint16		-
+E141 	1	R	Reserved	Uint16		-
+E142 	2	R	Battery 1 Rated Energy	Float32		W*H
+E144 	2	R	Battery 1 Max Charge Continues Power	Float32		W
+E146 	2	R	Battery 1 Max Discharge Continues Power	Float32		W
+E148 	2	R	Battery 1 Max Charge Peak  Power	Float32		W
+E14A 	2	R	Battery 1 Max Discharge Peak  Power	Float32		W
+E14C 	32	R	Reserved	Uint16		-
+E16C 	2	R	Battery 1 Average Temperature	Float32		°C
+E16E 	2	R	Battery 1 Max Temperature	Float32		°C
+E170 	2	R	Battery 1 Instantaneous Voltage	Float32		V
+E172 	2	R	Battery 1 Instantaneous Current	Float32		A
+E174 	2	R	Battery 1 Instantaneous Power	Float32		W
+E176 	4	R	Battery 1 Lifetime Export Energy Counter	Uint64		W*H
+E17A 	4	R	Battery 1 Lifetime Import Energy Counter	Uint64		W*H
+E17E 	2	R	Battery 1 Max Energy	Float32		W*H
+E180 	2	R	Battery 1 Available Energy	Float32		W*H
+E182 	2	R	Battery 1 State of Health (SOH)	Float32		N/A
+E184 	2	R	Battery 1 State of Energy (SOE)	Float32		N/A
+E186 	2	R	Battery 1 Status	Uint32		0-7
+E188 	2	R	Battery 1 Status Internal	Uint32		Vendor-defined status codes.
+E18A 	8	R	Battery 1 Events Log	Uint16[8]		Battery vendor's last fault ID
+E192 	8	R	Battery 1 Events Log Internal	Uint16[8]		-
+E19A 	32	R	Reserved	Uint16		N/A
+E200	16	R	Battery 2 Manufacturer Name	String[32]		-
+E210	16	R	Battery 2 Model	String[32]		-
+E220	16	R	Battery 2 Firmware Version	String[32]		-
+E230	16	R	Battery 2 Serial Number	String[32]		-
+E240	1	R	Battery 2 Device ID	Uint16		-
+E241	1	R	Reserved	Uint16		-
+E242	2	R	Battery 2 Rated Energy	Float32		W*H
+E244	2	R	Battery 2 Max Charge Continues Power	Float32		W
+E246	2	R	Battery 2 Max Discharge Continues Power	Float32		W
+E248	2	R	Battery 2 Max Charge Peak  Power	Float32		W
+E24A	2	R	Battery 2 Max Discharge Peak  Power	Float32		W
+E24C	32	R	Reserved	Uint16		-
+E26C	2	R	Battery 2 Average Temperature	Float32		°C
+E26E	2	R	Battery 2 Max Temperature	Float32		°C
+E270	2	R	Battery 2 Instantaneous Voltage	Float32		V
+E272	2	R	Battery 2 Instantaneous Current	Float32		A
+E274	2	R	Battery 2 Instantaneous Power	Float32		W
+E276	4	R	Battery 2 Lifetime Export Energy Counter	Uint64		W*H
+E27A	4	R	Battery 2 Lifetime Import Energy Counter	Uint64		W*H
+E27E	2	R	Battery 2 Max Energy	Float32		W*H
+E280	2	R	Battery 2 Available Energy	Float32		W*H
+E282	2	R	Battery 2 State of Health (SOH)	Float32		N/A
+E284	2	R	Battery 2 State of Energy (SOE)	Float32		N/A
+E286	2	R	Battery 2 Status	Uint32		0-7
+E288	2	R	Battery 2 Status Internal	Uint32		Vendor-defined status codes
+E28A	8	R	Battery 2 Events Log	Uint16[8]		Battery vendor's last fault ID
+E292	8	R	Battery 2 Events Log Internal	Uint16[8]		-
+E29A	32	R	Reserved	Uint16		N/A
+F600	1	R/W	Commit Grid Limits Settings	Int16	N/A	N/A
+F601	1	R/W	Restore Grid Limits Settings Defaults	Int16	N/A	N/A
+F602	2	R/W	VgMax1	Float32	0-MAX_FLOAT	V
+F604	2	R/W	VgMax1_HoldTime	Uint32	0-MAX_UINT32	msec
+F606	2	R/W	VgMax2	Float32	0-MAX_FLOAT	V
+F608	2	R/W	VgMax2_HoldTime	Uint32	0-MAX_UINT32	msec
+F60A	2	R/W	VgMax3	Float32	0-MAX_FLOAT	V
+F60C	2	R/W	VgMax3_HoldTime	Uint32	0-MAX_UINT32	msec
+F60E	2	R/W	VgMax4	Float32	0-MAX_FLOAT	V
+F610	2	R/W	VgMax4_HoldTime	Uint32	0-MAX_UINT32	msec
+F612	2	R/W	VgMax5	Float32	0-MAX_FLOAT	V
+F614	2	R/W	VgMax5_HoldTime	Uint32	0-MAX_UINT32	msec
+F616	2	R/W	VgMin1	Float32	0-MAX_FLOAT	V
+F618	2	R/W	VgMin1_HoldTime	Uint32	0-MAX_UINT32	msec
+F61A	2	R/W	VgMin2	Float32	0-MAX_FLOAT	V
+F61C	2	R/W	VgMin2_HoldTime	Uint32	0-MAX_UINT32	msec
+F61E	2	R/W	VgMin3	Float32	0-MAX_FLOAT	V
+F620	2	R/W	VgMin3_HoldTime	Uint32	0-MAX_UINT32	msec
+F622	2	R/W	VgMin4	Float32	0-MAX_FLOAT	V
+F624	2	R/W	VgMin4_HoldTime	Uint32	0-MAX_UINT32	msec
+F626	2	R/W	VgMin5	Float32	0-MAX_FLOAT	V
+F628	2	R/W	VgMin5_HoldTime	Uint32	0-MAX_UINT32	msec
+F62A	2	R/W	FgMax1	Float32	0-MAX_FLOAT	Hz
+F62C	2	R/W	FgMax1_HoldTime	Uint32	0-MAX_UINT32	msec
+F62E	2	R/W	FgMax2	Float32	0-MAX_FLOAT	Hz
+F630	2	R/W	FgMax2_HoldTime	Uint32	0-MAX_UINT32	msec
+F632	2	R/W	FgMax3	Float32	0-MAX_FLOAT	Hz
+F634	2	R/W	FgMax3_HoldTime	Uint32	0-MAX_UINT32	msec
+F636	2	R/W	FgMax4	Float32	0-MAX_FLOAT	Hz
+F638	2	R/W	FgMax4_HoldTime	Uint32	0-MAX_UINT32	msec
+F63A	2	R/W	FgMax5	Float32	0-MAX_FLOAT	Hz
+F63C	2	R/W	FgMax5_HoldTime	Uint32	0-MAX_UINT32	msec
+F63E	2	R/W	FgMin1	Float32	0-MAX_FLOAT	Hz
+F640	2	R/W	FgMin1_HoldTime	Uint32	0-MAX_UINT32	msec
+F642	2	R/W	FgMin2	Float32	0-MAX_FLOAT	Hz
+F644	2	R/W	FgMin2_HoldTime	Uint32	0-MAX_UINT32	msec
+F646	2	R/W	FgMin3	Float32	0-MAX_FLOAT	Hz
+F648	2	R/W	FgMin3_HoldTime	Uint32	0-MAX_UINT32	msec
+F64A	2	R/W	FgMin4	Float32	0-MAX_FLOAT	Hz
+F64C	2	R/W	FgMin4_HoldTime	Uint32	0-MAX_UINT32	msec
+F64E	2	R/W	FgMin5	Float32	0-MAX_FLOAT	Hz
+F650	2	R/W	FgMin5_HoldTime	Uint32	0-MAX_UINT32	msec
+F652	2	R/W	GRM_Time	Uint32	0-MAX_UINT32	msec
